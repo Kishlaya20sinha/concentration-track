@@ -1,56 +1,95 @@
-# Concentration Tracker
+# 🧠✨ Concentration Tracker: An AI-Powered Attentiveness System
 
-A real-time concentration tracking system built using **MediaPipe** and **OpenCV**. This tool evaluates a user's attentiveness based on eye blinks, gaze direction, and head pose — ideal for applications like study monitoring, e-learning, or productivity enhancement.
+**Author:** Kishlaya Sinha  
+📧 Email: [kishlaya20sinha@gmail.com](mailto:kishlaya20sinha@gmail.com)  
+🔗 GitHub: [Kishlaya20sinha](https://github.com/Kishlaya20sinha)  
+💼 LinkedIn: [Kishlaya Sinha](https://www.linkedin.com/in/kishlaya-sinha-9134a0211/)
 
-## Features
+---
 
-- **Eye Blink Detection**  
-  Calculates Eye Aspect Ratio (EAR) to detect blinks and periods of eye closure.
+## 🚀 Overview
 
-- **Gaze Detection**  
-  Estimates if the user is looking straight or away using iris landmarks.
+This project presents the **Concentration Tracker**, a cutting-edge real-time system designed to monitor and evaluate user attentiveness.  
+By integrating **MediaPipe** and **OpenCV**, it analyzes physiological indicators like eye blinks, gaze direction, and head pose.
 
-- **Head Pose Estimation**  
-  Evaluates user orientation based on nose position relative to screen center.
+Ideal for:
+- Academic environments 📚
+- E-learning platforms 🧑‍💻
+- Workplace productivity tools 📈
 
-- **Concentration Score**  
-  Computes a weighted score combining gaze, head pose, and blinking behavior.
+It provides immediate visual feedback to help users manage their focus effectively.
 
-- **Live Visual Feedback**  
-  Real-time UI overlay on webcam feed showing concentration level, blink status, and distraction counter.
+---
 
-- **Distraction Tracking**  
-  Counts how many frames the user is not paying attention and issues warnings if needed.
+## 🎯 Core Functionalities
 
-## Sample Output
+- **Ocular Blink Detection 👀**  
+  Uses Eye Aspect Ratio (EAR) to detect blinks and closed-eye durations.
 
-The video feed displays:
-- A concentration percentage bar
-- Blink detection alerts
-- Distraction count
-- ACTIVE / DISTRACTED indicator
-- FPS counter
+- **Gaze Direction Analysis ➡️**  
+  Analyzes iris landmarks to determine attention direction.
 
-## Tech Stack
+- **Head Pose Estimation 🧑‍🦰**  
+  Uses nose position to infer head orientation.
 
-- Python 3.x
-- OpenCV
-- MediaPipe (FaceMesh)
-- NumPy
+- **Integrated Concentration Metric 📊**  
+  Combines blink, gaze, and head pose into a concentration score.
 
-## How It Works
+- **Dynamic Visual Feedback 📺**  
+  Live webcam overlay showing focus level, blink alerts, and distraction counts.
 
-1. **Face landmarks** are detected using MediaPipe FaceMesh.
-2. **EAR (Eye Aspect Ratio)** is used to detect blinks.
-3. **Iris position** is used to assess gaze direction.
-4. **Nose position** is used to infer head pose.
-5. A **composite concentration score** is calculated as: score = 0.4 * gaze + 0.4 * head_pose + 0.2 * (not blinking)
-6. A **visual feedback system** shows user concentration in real time.
+- **Distraction Monitoring 🚫**  
+  Tracks inattention over time and triggers alerts.
+
+---
+
+## 🖼️ Illustrative Output
+
+The live webcam feed displays:
+- 💯 Concentration percentage
+- 👁️‍🗨️ Real-time blink alerts
+- 🔢 Distraction counter
+- ✅❌ "ACTIVE" or "DISTRACTED" status
+- ⚡ FPS for performance monitoring
+
+---
+
+## 💻 Technological Framework
+
+- **Python 3.x** 🐍
+- **OpenCV** 📸
+- **MediaPipe (FaceMesh)** ✨
+- **NumPy** ➕
+
+---
+
+## ⚙️ Operational Methodology
+
+1. **Facial Landmark Detection 📍**  
+   Uses MediaPipe FaceMesh for key facial features.
+
+2. **Blink Recognition 👁️**  
+   Calculates EAR to identify blink events.
+
+3. **Gaze Analysis ➡️**  
+   Analyzes iris position for gaze direction.
+
+4. **Head Pose Inference 🧭**  
+   Uses nose coordinates to infer orientation.
+
+5. **Concentration Score Calculation 🧮**  
+   Combines metrics with weighted formula:
+
+   ```text
+   Concentration Score = 0.4 × gaze + 0.4 × head_pose + 0.2 × absence_of_blinking
+
+6. **Live Interface Rendering 🖥️**
+   Displays real-time concentration feedback on screen.
 
 ## Run the Project
 
 ```bash
-git clone https://github.com/asutoshp10/concentration_tracker.git
-cd concentration_tracker
+git clone https://github.com/Kishlaya20sinha/concentration-track.git
+cd concentration-tracker
 pip install -r requirements.txt
 python concentration_tracker.py
